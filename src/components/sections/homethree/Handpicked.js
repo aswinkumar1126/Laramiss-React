@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Slider from 'react-slick';
 
-import img1 from '../../../assets/img/room-slider/06.jpg';
-import img2 from '../../../assets/img/room-slider/08.jpg';
-import img3 from '../../../assets/img/room-slider/07.jpg';
+import img1 from '../../../assets/img/room-slider/img_1.jpg';
+import img2 from '../../../assets/img/room-slider/img_3.jpg';
+import img3 from '../../../assets/img/room-slider/img_2.jpg';
 
 const roomslidertwoposts = [
     { img: img1, title: 'Get All Gold Jewels', text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.', price: '345', weight: '10gm' },
@@ -77,7 +77,7 @@ class Handpicked extends Component {
             ],
         }
         return (
-            <section className="room-slider bg-white pb-100 pt-115">
+            <section className="room-slider bg-white pb-50 pt-55">
                 <div className="container-fluid p-0">
                     <div className="section-title mb-80 text-center">
                         <div className="section-title-icon">

@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import Banner from './Banner';
 import Category from './Category';
+import Category1 from './Category1';
 import Habout from '../../layouts/Habout';
 import Trending from './Trending';
 import Condos from './Condos';
@@ -22,10 +23,11 @@ class Content extends Component {
             <Fragment>
                 <Banner/>
                 <Category/>
+                <Category1/>
                 <Handpicked />
+                <Cta />
                 <Trending/>
                 <Condos/>
-                <Cta/>
                 <Bestselling/>
                 <Ourcategory/>
                 <Handpick/>
@@ -35,7 +37,7 @@ class Content extends Component {
                 <Onsale/>
                 <Video/>
                 <Latestproducts/>
-                <Habout />
+                {/* <Habout /> */}
                 <Blog/>
             </Fragment>
         );

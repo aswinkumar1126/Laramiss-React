@@ -2,14 +2,14 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Slider from 'react-slick';
 
-import img1 from '../../../assets/img/blog/blog-1.png';
-import img2 from '../../../assets/img/blog/blog-2.png';
-import img3 from '../../../assets/img/blog/blog-3.png';
-import img4 from '../../../assets/img/blog/blog-4.png';
+import img1 from '../../../assets/img/category/blog.jpg';
+import img2 from '../../../assets/img/category/image1.jpg';
+import img3 from '../../../assets/img/category/image2.jpg';
+import img4 from '../../../assets/img/category/menu-gallery-2.b8300c96.jpg';
 
 const blogposts = [
     { img: img1, title: 'Ruby on Rose Accessories and Blue Gemstones.', postdate: '26 Jun, 2022', linktext: 'Read More' },
-    { img: img2, title: 'Matching Jewellery Sets with your Outwear.', postdate: '26 Jun, 2022', linktext: 'Read More' },
+    { img: img2, title: 'Matching silver Jewellery Sets with your Outwear.', postdate: '26 Jun, 2022', linktext: 'Read More' },
     { img: img3, title: 'New Retro Collection of Pendants and Ring sets.', postdate: '26 Jun, 2022', linktext: 'Read More' },
     { img: img4, title: 'Special Wedding Rings Sets for Him and for Her.', postdate: '26 Jun, 2022', linktext: 'Read More' },
 ];
@@ -50,7 +50,7 @@ class Blog extends Component {
             ],
         }
         return (
-            <section className="pt-115 pb-115 blog-style-2">
+            <section className="pt-85 pb-85 blog-style-2">
                 <div className="container">
                     <div className="row align-items-center">
                         <div className="col-lg-6 col-md-8 col-sm-7">
@@ -75,7 +75,7 @@ class Blog extends Component {
                                         <div className="post-date">
                                             {item.postdate}
                                         </div>
-                                        <h3 className="post-title"><Link to="#">{item.title}</Link></h3>
+                                        <h3 ><Link to="#" className="post-title" >{item.title}</Link></h3>
                                         <Link to="/blog-detail" className="post-link"><span>{item.linktext}</span></Link>
                                     </div>
                                     <Link to="/blog-detail" />

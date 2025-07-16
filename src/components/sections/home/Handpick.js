@@ -2,19 +2,36 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
 
 
-import img1 from '../../../assets/img/service/1.png';
-import img2 from '../../../assets/img/service/2.png';
-import img3 from '../../../assets/img/service/3.png';
+
+import img1 from '../../../assets/img/shop/create a image with jeweler wearer by women maximum use the silver jewels with different categories.jpg';
+import img2 from '../../../assets/img/shop/create a image with jeweler wearer by women maximum use the silver jewels with different categories (1).jpg';
+import img3 from '../../../assets/img/shop/focus the jewels not a womwn byt women wears a jewels (1).jpg';
+
 
 const serviceposts = [
-    { img: img1, icon: 'flaticon-earrings', title: 'Artifical Earings', text: 'Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet' },
-    { img: img2, icon: 'flaticon-bracelet', title: 'Bracelet Curb', text: 'Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet' },
-    { img: img3, icon: 'flaticon-necklace', title: 'Azrouel Variable', text: 'Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet' },
+    {
+        img: img1,
+        icon: 'flaticon-earrings',
+        title: 'Silver Earrings',
+        text: 'Elegant handcrafted silver earrings designed for  traditional styles alike.',
+    },
+    {
+        img: img2,
+        icon: 'flaticon-bracelet',
+        title: 'Silver Bracelets',
+        text: 'Explore our range of polished silver bracelets perfect for daily wear or gifting.',
+    },
+    {
+        img: img3,
+        icon: 'flaticon-necklace',
+        title: 'Silver Necklaces',
+        text: 'Discover minimal and statement silver necklaces crafted with timeless detail.',
+    },
 ];
 class Handpick extends Component {
     render() {
         return (
-            <section className="service-sec bg-black pt-115 pb-85">
+            <section className="service-sec bg-black ">
                 <div className="container">
                     <div className="section-title text-center mb-50">
                         <div className="section-title-icon">

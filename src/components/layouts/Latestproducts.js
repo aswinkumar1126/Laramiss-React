@@ -2,11 +2,10 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Slider from 'react-slick';
 
-import img1 from '../../assets/img/shop/01.jpg';
-import img2 from '../../assets/img/shop/02.jpg';
-import img3 from '../../assets/img/shop/03.jpg';
-import img4 from '../../assets/img/shop/04.jpg';
-
+import img1 from '../../assets/img/category/image-33.jpg';
+import img2 from '../../assets/img/category/menu-gallery-2.b8300c96.jpg';
+import img3 from '../../assets/img/category/image-4 (2).jpg';
+import img4 from '../../assets/img/category/menu-gallery-2.b8300c96.jpg';
 const shoplatestposts = [
     { img: img1, discount: 15, title: 'Ankle Bracelet', price: 390 },
     { img: img2, discount: '', title: 'Stud Earrings', price: 290 },
@@ -55,7 +54,7 @@ class Latestproducts extends Component {
             ],
         }
         return (
-            <section className="restaurant-tab-area bg-black pt-115 pb-85">
+            <section className="restaurant-tab-area bg-black pt-85 pb-75">
                 <div className="container">
                     <div className="row align-items-center">
                         <div className="col-lg-6 col-md-8 col-sm-7">
@@ -96,8 +95,8 @@ class Latestproducts extends Component {
                                         <h4>
                                             <Link to="/shop-detail" className='title'>{item.title}</Link>
                                         </h4>
-                                        <span className="price">${item.price} 
-                                        { item.discount > 0 || item.discount !== '' ? <span> ${Math.ceil(item.price * (item.discount / 100))} </span> : '' }</span>
+                                        <span className="price">₹{item.price} 
+                                            {item.discount > 0 || item.discount !== '' ? <span> ₹{Math.ceil(item.price * (item.discount / 100))} </span> : '' }</span>
                                         <Link to="/shop-detail" className="link"><i className="fal fa-arrow-right" /></Link>
                                     </div>
                                 </div>

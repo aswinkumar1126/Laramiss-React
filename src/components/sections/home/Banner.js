@@ -8,28 +8,39 @@ import img1 from '../../../assets/img/banner/Tritiya_Slider_3.webp';
 import img2 from '../../../assets/img/banner/Tritiya_Slider_2.webp';
 import img3 from '../../../assets/img/banner/Tritiya_Slider_1.webp';
 
-const bannerposts = [
-    { img: img1 },
-    { img: img2 },
-    { img: img3 }
+const bannerSlides = [
+    {
+        img: img1,
+        title: "High-End Jewelry Items",
+        description: "Discover our exquisite collection of handcrafted jewelry pieces that embody elegance and timeless beauty.",
+    },
+    {
+        img: img2,
+        title: "Luxury Silver Collections",
+        description: "Experience the brilliance of our premium silver selections, perfect for special occasions.",
+    },
+    {
+        img: img3,
+        title: "Handmade Silver Masterpieces",
+        description: "Explore our unique silver jewelry designs that combine traditional craftsmanship with modern aesthetics.",
+    },
 ];
 
 class Banner extends Component {
     constructor(props) {
         super(props);
-        this.sliderRef = React.createRef();
         this.state = {
-            isMobile: false
+            isMobile: false,
         };
     }
-
+    
     componentDidMount() {
         this.handleResize();
-        window.addEventListener('resize', this.handleResize);
+        window.addEventListener("resize", this.handleResize);
     }
 
     componentWillUnmount() {
-        window.removeEventListener('resize', this.handleResize);
+        window.removeEventListener("resize", this.handleResize);
     }
 
     handleResize = () => {
@@ -38,108 +49,59 @@ class Banner extends Component {
 
     render() {
         const { isMobile } = this.state;
+
         const settings = {
             slidesToShow: 1,
             slidesToScroll: 1,
-            fade: true,
             infinite: true,
             autoplay: true,
-            autoplaySpeed: 4000,
+            autoplaySpeed: 5000,
             arrows: false,
-            dots: false,
+            dots: true,
             draggable: true,
-            swipe: true,
-            swipeToSlide: true,
-            touchThreshold: 15, // Increased for better touch sensitivity
-            pauseOnHover: false,
-            pauseOnFocus: false,
-            speed: 1000,
-            ref: this.sliderRef,
-            cssEase: 'ease-in-out'
+            speed: 800,
+            fade: true,
+            cssEase: "ease-in-out",
+            pauseOnHover: true,
+            pauseOnFocus: true,
         };
 
         return (
-            <section className="banner-area banner-style-one">
-                <Cursor />
-                <div className={`fullscreen-carousel ${isMobile ? 'mobile-view' : ''}`}>
-                    <Slider {...settings}>
-                        {bannerposts.map((item, i) => (
-                            <div key={i} className="single-slide">
-                                <div
-                                    className="slide-bg"
-                                    style={{ backgroundImage: `url(${item.img})` }}
-                                    aria-label={`Slide ${i + 1}`}
-                                />
-                                <div className="image-overlay"></div>
+            <section className="banner-area">
+                {/* <Cursor /> */}
+                <Slider {...settings} className="combined-slider">
+                    {bannerSlides.map((slide, index) => (
+                        <div key={index} className="single-slide">
+                            <div className="slide-image-wrapper">
+                                <img src={slide.img} alt={slide.title} className="slide-image" />
+                                <div className="image-overlay" />
                             </div>
-                        ))}
-                    </Slider>
-                </div>
-
-                {!isMobile && (
-                    <ReactWOW animation='fadeIn' delay="0.3s">
-                        <div className="vertical-text">
-                            <ul>
-                                <li>
-                                    <Link to="#" aria-label="Facebook">
-                                        <i className="fab fa-facebook" /> Facebook
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link to="#" aria-label="Instagram">
-                                        <i className="fab fa-instagram" /> Instagram
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link to="#" aria-label="Twitter">
-                                        <i className="fab fa-twitter" /> Twitter
-                                    </Link>
-                                </li>
-                            </ul>
-                        </div>
-                    </ReactWOW>
-                )}
-
-                {!isMobile && (
-                    <ReactWOW animation='fadeIn' delay="0.3s">
-                        <div className="vertical-text right">
-                            <span>Call us on: </span>
-                            <span>+123 456 789</span>
-                        </div>
-                    </ReactWOW>
-                )}
-
-                <div className="content-overlay">
-                    <div className="container container-custom-two">
-                        <div className={`row align-items-center ${isMobile ? 'justify-content-center' : ''}`}>
-                            <div className={`${isMobile ? 'col-12 text-center' : 'col-lg-6 col-md-8'}`}>
-                                <div className="banner-content">
-                                    <ReactWOW animation='fadeInDown' delay="0.3s">
-                                        <span className="promo-tag">Jewelry Design With Love</span>
-                                    </ReactWOW>
-                                    <ReactWOW animation='fadeInLeft' delay="0.5s">
-                                        <h1 className="title">High-End <br />Jewelry Items</h1>
-                                    </ReactWOW>
-                                    <div className="button-group">
-                                        <ReactWOW animation='fadeInUp' delay="0.7s">
-                                            <Link className="main-btn btn-filled" to="/about" aria-label="Buy Now">
-                                                Buy Now
-                                            </Link>
-                                        </ReactWOW>
-                                        <ReactWOW animation='fadeInUp' delay="0.9s">
-                                            <Link className="main-btn btn-border" to="/about" aria-label="Explore Now">
-                                                Explore Now
-                                            </Link>
-                                        </ReactWOW>
+                            <div className="content-overlay">
+                                <div className="container container-custom-two">
+                                    <div className={`row align-items-center ${isMobile ? 'justify-content-center' : ''}`}>
+                                        <div className={`${isMobile ? 'col-12' : 'col-lg-6 col-md-8'}`}>
+                                            <div className={`banner-content ${isMobile ? 'mobile-content' : ''}`}>
+                                                <ReactWOW animation="fadeInLeft" delay="0.5s">
+                                                    <h1 className="title">{slide.title}</h1>
+                                                </ReactWOW>
+                                                <ReactWOW animation="fadeInLeft" delay="0.7s">
+                                                    <p className="description">{slide.description}</p>
+                                                </ReactWOW>
+                                                <div className="button-groups">
+                                                    <ReactWOW animation="fadeInUp" delay="0.9s">
+                                                        <Link className="main-btn btn-filled mt-20" to="/about" aria-label="Shop Now">
+                                                            Shop Now
+                                                        </Link>
+                                                    </ReactWOW>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            {!isMobile && (
-                                <div className="col-lg-6 col-md-4"></div>
-                            )}
                         </div>
-                    </div>
-                </div>
+                    ))}
+                </Slider>
             </section>
         );
     }

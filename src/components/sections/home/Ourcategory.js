@@ -2,48 +2,46 @@ import React, { Component } from 'react';
 import { Tab, Nav } from 'react-bootstrap';
 import { Link } from 'react-router-dom'
 
-import img1 from '../../../assets/img/shop/01.jpg';
-import img2 from '../../../assets/img/shop/02.jpg';
-import img3 from '../../../assets/img/shop/03.jpg';
+import img1 from '../../../assets/img/shop/image-33.jpg';
+import img2 from '../../../assets/img/shop/menu-gallery-2.b8300c96.jpg';
+import img3 from '../../../assets/img/shop/image-4 (2).jpg';
 
 const ringsposts = [
-    { img: img3, discount: 10, title: 'Diamond Ring.', price: 890 },
-    { img: img1, discount: 15, title: 'Stud Earrings ', price: 580 },
-    { img: img2, discount: 40, title: 'Ankle Bracelet', price: 290 },
-    { img: img3, discount: 10, title: 'Diamond Ring.', price: 890 },
+    { img: img3, discount: 10, title: 'Silver  Ring', price: 890 },
+    { img: img1, discount: 15, title: 'Silver Stud Earrings', price: 580 },
+    { img: img2, discount: 40, title: 'Silver Ankle Bracelet', price: 290 },
+    { img: img3, discount: 10, title: 'Silver  Ring', price: 890 },
 ];
-
 const earingposts = [
-    { img: img1, discount: 15, title: 'Ankle Bracelet', price: 390 },
-    { img: img2, discount: '', title: 'Stud Earrings', price: 290 },
-    { img: img3, discount: 10, title: 'Crumpled Ring', price: 450 },
-    { img: img1, discount: 15, title: 'Golden Pendant', price: 780 },
+    { img: img1, discount: 15, title: 'Silver Ankle Bracelet', price: 390 },
+    { img: img2, discount: '', title: 'Silver Stud Earrings', price: 290 },
+    { img: img3, discount: 10, title: 'Silver Crumpled Ring', price: 450 },
+    { img: img1, discount: 15, title: 'Silver  Pendant', price: 780 },
 ];
-
 const necklessposts = [
-    { img: img1, discount: 15, title: 'Ankle Bracelet', price: 390 },
-    { img: img2, discount: '', title: 'Stud Earrings', price: 290 },
-    { img: img3, discount: 10, title: 'Crumpled Ring', price: 450 },
-    { img: img1, discount: 15, title: 'Golden Pendant', price: 780 },
+    { img: img1, discount: 15, title: 'Silver Ankle Bracelet', price: 390 },
+    { img: img3, discount: 10, title: 'Silver Crumpled Ring', price: 450 },
+    { img: img1, discount: 15, title: 'Silver  Pendant', price: 780 },
+    { img: img2, discount: '', title: 'Silver Stud Earrings', price: 290 },
 ];
 
 const braceletposts = [
-    { img: img1, discount: 15, title: 'Ankle Bracelet', price: 390 },
-    { img: img2, discount: '', title: 'Stud Earrings', price: 290 },
-    { img: img3, discount: 10, title: 'Crumpled Ring', price: 450 },
-    { img: img1, discount: 15, title: 'Golden Pendant', price: 780 },
+    { img: img3, discount: 10, title: 'Silver Crumpled Ring', price: 450 },
+    { img: img1, discount: 15, title: 'Silver Ankle Bracelet', price: 390 },
+    { img: img2, discount: '', title: 'Silver Stud Earrings', price: 290 },
+    { img: img1, discount: 15, title: 'Silver  Pendant', price: 780 },
 ];
 const armletsposts = [
-    { img: img1, discount: 15, title: 'Ankle Bracelet', price: 390 },
-    { img: img2, discount: '', title: 'Stud Earrings', price: 290 },
-    { img: img3, discount: 10, title: 'Crumpled Ring', price: 450 },
-    { img: img1, discount: 15, title: 'Golden Pendant', price: 780 },
+    { img: img2, discount: '', title: 'Silver Stud Earrings', price: 290 },
+    { img: img3, discount: 10, title: 'Silver Crumpled Ring', price: 450 },
+    { img: img1, discount: 15, title: 'Silver  Pendant', price: 780 },
+    { img: img1, discount: 15, title: 'Silver Ankle Bracelet', price: 390 },
 ];
 const ankletsposts = [
-    { img: img1, discount: 15, title: 'Ankle Bracelet', price: 390 },
-    { img: img2, discount: '', title: 'Stud Earrings', price: 290 },
-    { img: img3, discount: 10, title: 'Crumpled Ring', price: 450 },
-    { img: img1, discount: 15, title: 'Golden Pendant', price: 780 },
+    { img: img2, discount: '', title: 'Silver Stud Earrings', price: 290 },
+    { img: img1, discount: 15, title: 'Silver Ankle Bracelet', price: 390 },
+    { img: img3, discount: 10, title: 'Silver Crumpled Ring', price: 450 },
+    { img: img1, discount: 15, title: 'Silver  Pendant', price: 780 },
 ];
 class Ourcategory extends Component {
     render() {
@@ -117,10 +115,10 @@ class Ourcategory extends Component {
                                                 </div>
                                                 <div className="desc">
                                                     <h4>
-                                                        <Link to="/shop-detail">{item.title}</Link>
+                                                        <Link to="/shop-detail" className='title'>{item.title}</Link>
                                                     </h4>
-                                                    <span className="price">${item.price}
-                                                        {item.discount > 0 || item.discount !== '' ? <span> ${Math.ceil(item.price * (item.discount / 100))} </span> : ''}</span>
+                                                    <span className="price">₹{item.price}
+                                                        {item.discount > 0 || item.discount !== '' ? <span> ₹{Math.ceil(item.price * (item.discount / 100))} </span> : ''}</span>
                                                     <Link to="/shop-detail" className="link"><i className="fal fa-arrow-right" /></Link>
                                                 </div>
                                             </div>
@@ -151,10 +149,10 @@ class Ourcategory extends Component {
                                                 </div>
                                                 <div className="desc">
                                                     <h4>
-                                                        <Link to="/shop-detail">{item.title}</Link>
+                                                        <Link to="/shop-detail" className='title'>{item.title}</Link>
                                                     </h4>
-                                                    <span className="price">${item.price}
-                                                        {item.discount > 0 || item.discount !== '' ? <span> ${Math.ceil(item.price * (item.discount / 100))} </span> : ''}</span>
+                                                    <span className="price">₹{item.price}
+                                                        {item.discount > 0 || item.discount !== '' ? <span> ₹{Math.ceil(item.price * (item.discount / 100))} </span> : ''}</span>
                                                     <Link to="/shop-detail" className="link"><i className="fal fa-arrow-right" /></Link>
                                                 </div>
                                             </div>
@@ -185,10 +183,10 @@ class Ourcategory extends Component {
                                                 </div>
                                                 <div className="desc">
                                                     <h4>
-                                                        <Link to="/shop-detail">{item.title}</Link>
+                                                        <Link to="/shop-detail" className='title'> {item.title}</Link>
                                                     </h4>
                                                     <span className="price">${item.price}
-                                                        {item.discount > 0 || item.discount !== '' ? <span> ${Math.ceil(item.price * (item.discount / 100))} </span> : ''}</span>
+                                                        {item.discount > 0 || item.discount !== '' ? <span> ₹{Math.ceil(item.price * (item.discount / 100))} </span> : ''}</span>
                                                     <Link to="/shop-detail" className="link"><i className="fal fa-arrow-right" /></Link>
                                                 </div>
                                             </div>
@@ -219,10 +217,10 @@ class Ourcategory extends Component {
                                                 </div>
                                                 <div className="desc">
                                                     <h4>
-                                                        <Link to="/shop-detail">{item.title}</Link>
+                                                        <Link to="/shop-detail" className='title'>{item.title}</Link>
                                                     </h4>
                                                     <span className="price">${item.price}
-                                                        {item.discount > 0 || item.discount !== '' ? <span> ${Math.ceil(item.price * (item.discount / 100))} </span> : ''}</span>
+                                                        {item.discount > 0 || item.discount !== '' ? <span> ₹{Math.ceil(item.price * (item.discount / 100))} </span> : ''}</span>
                                                     <Link to="/shop-detail" className="link"><i className="fal fa-arrow-right" /></Link>
                                                 </div>
                                             </div>
@@ -253,10 +251,10 @@ class Ourcategory extends Component {
                                                 </div>
                                                 <div className="desc">
                                                     <h4>
-                                                        <Link to="/shop-detail">{item.title}</Link>
+                                                        <Link to="/shop-detail" className='title'>{item.title}</Link>
                                                     </h4>
                                                     <span className="price">${item.price}
-                                                        {item.discount > 0 || item.discount !== '' ? <span> ${Math.ceil(item.price * (item.discount / 100))} </span> : ''}</span>
+                                                        {item.discount > 0 || item.discount !== '' ? <span> ₹{Math.ceil(item.price * (item.discount / 100))} </span> : ''}</span>
                                                     <Link to="/shop-detail" className="link"><i className="fal fa-arrow-right" /></Link>
                                                 </div>
                                             </div>
@@ -287,10 +285,10 @@ class Ourcategory extends Component {
                                                 </div>
                                                 <div className="desc">
                                                     <h4>
-                                                        <Link to="/shop-detail">{item.title}</Link>
+                                                        <Link to="/shop-detail" className='title'>{item.title}</Link>
                                                     </h4>
                                                     <span className="price">${item.price}
-                                                        {item.discount > 0 || item.discount !== '' ? <span> ${Math.ceil(item.price * (item.discount / 100))} </span> : ''}</span>
+                                                        {item.discount > 0 || item.discount !== '' ? <span> ₹{Math.ceil(item.price * (item.discount / 100))} </span> : ''}</span>
                                                     <Link to="/shop-detail" className="link"><i className="fal fa-arrow-right" /></Link>
                                                 </div>
                                             </div>

@@ -11,7 +11,7 @@ class About extends Component {
         return (
             <Fragment>
                 <MetaTags>
-                    <title>Laramiss | About Us</title>
+                    <title>Bmg | AboutUs</title>
                     <meta
                         name="description"
                         content="#"

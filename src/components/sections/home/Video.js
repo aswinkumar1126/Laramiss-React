@@ -4,7 +4,7 @@ import ReactWOW from 'react-wow';
 import $ from 'jquery';
 import 'magnific-popup';
 
-import videoimg from '../../../assets/img/text-block/03.jpg';
+import videoimg from '../../../assets/img/room-suite/Product_7.webp'
 
 class Video extends Component {
     componentDidMount(){
@@ -27,9 +27,8 @@ class Video extends Component {
                                     <h2>Make Your Day Brighter .</h2>
                                 </div>
                                 <p className="pr-50">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat you have to understand
-                                    this.
-          </p>
+                                    Elevate your look with handcrafted silver pieces designed to shine with simplicity and grace.
+                                </p>
                                 <Link to="/contact" className="main-btns btn-filled mt-40">See More</Link>
                             </div>
                         </div>

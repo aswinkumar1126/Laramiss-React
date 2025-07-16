@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Slider from 'react-slick';
 
-import texture from '../../../assets/img/texture-1.5da6b882.png';
-import img1 from '../../../assets/img/shop/01.jpg';
-import img2 from '../../../assets/img/shop/02.jpg';
-import img3 from '../../../assets/img/shop/03.jpg';
-import img4 from '../../../assets/img/shop/04.jpg';
+// import texture from '../../../assets/img/';
+import img1 from '../../../assets/img/shop/menu-gallery-2.b8300c96.jpg';
+import img2 from '../../../assets/img/shop/image-33.jpg';
+import img3 from '../../../assets/img/shop/image-4 (2).jpg';
+import img4 from '../../../assets/img/shop/image-33.jpg';
 
 const shopposts = [
     { img: img1, discount: 15, title: 'Ankle Bracelet', price: 390 },
@@ -45,7 +45,7 @@ class Bestselling extends Component {
         }
         return (
             <section className="pt-115 pb-115 container-wide restaurant-tab-area position-relative">
-                <img src={texture} alt="texture" className="texture-1" />
+                {/* <img src={texture} alt="texture" className="texture-1" /> */}
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-5">
@@ -55,8 +55,8 @@ class Bestselling extends Component {
                                     <h2>Bestselling Products </h2>
                                 </div>
                                 <p className="pr-50">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, aliquip ex ea commodo consequat you have to understand this.
-          </p>
+                                    Shop our latest silver jewelry – from elegant anklets to minimal rings – all crafted with premium polish and timeless style.
+                                </p>
                                 <Link to="/shop-left" className="main-btns btn-filled mt-40">Shop now</Link>
                             </div>
                         </div>
@@ -85,8 +85,8 @@ class Bestselling extends Component {
                                                 <h4 >
                                                     <Link to="/shop-detail" className='title'>{item.title}</Link>
                                                 </h4>
-                                                <span className="price">${item.price}
-                                                    {item.discount > 0 || item.discount !== '' ? <span> ${Math.ceil(item.price * (item.discount / 100))} </span> : ''}</span>
+                                                <span className="price"> ₹{item.price}
+                                                    {item.discount > 0 || item.discount !== '' ? <span> ₹{Math.ceil(item.price * (item.discount / 100))} </span> : ''}</span>
                                                 <Link to="/shop-detail" className="link"><i className="fal fa-arrow-right" /></Link>
                                             </div>
                                         </div>

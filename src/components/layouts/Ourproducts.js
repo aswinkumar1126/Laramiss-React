@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
-import img1 from '../../assets/img/shop/01.jpg';
-import img2 from '../../assets/img/shop/02.jpg';
-import img3 from '../../assets/img/shop/03.jpg';
-import img4 from '../../assets/img/shop/04.jpg';
+import img1 from '../../assets/img/category/menu-gallery-1.17b8f89b.jpg';
+import img2 from '../../assets/img/category/menu-gallery-2.b8300c96.jpg';
+import img3 from '../../assets/img/category/menu-gallery-3.dd0dd075.jpg';
+import img4 from '../../assets/img/category/menu-gallery-2.b8300c96.jpg';
 
 const featureposts = [
     { img: img1,  discount: 15, title: 'Ankle Bracelet', price: 390},

@@ -1,16 +1,36 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom'
 
-import cnimg1 from '../../../assets/img/category/grid-3.webp';
-import cnimg2 from '../../../assets/img/category/grid.png';
-import cnimg3 from '../../../assets/img/category/grid.png';
-import cnimg4 from '../../../assets/img/category/grid.png';
+import cnimg1 from '../../../assets/img/category/menu-gallery-1.17b8f89b.jpg';
+import cnimg2 from '../../../assets/img/category/menu-gallery-2.b8300c96.jpg';
+import cnimg3 from '../../../assets/img/category/menu-gallery-3.dd0dd075.jpg';
+import cnimg4 from '../../../assets/img/category/menu-gallery-2.b8300c96.jpg';
 
 const condosposts = [
-    { img: cnimg1, title: 'Handmade Earring', text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do', price: '$299' },
-    { img: cnimg2, title: 'Diamond Nosering', text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do', price: '$499' },
-    { img: cnimg3, title: 'Silver Bracelet', text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do', price: '$299' },
-    { img: cnimg4, title: 'Gold Pendents', text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do', price: '$199' },
+    {
+        img: cnimg1,
+        title: 'Handmade Silver Earring',
+        text: 'Elegant handcrafted silver earrings with a modern finish.',
+        price: '₹2,499'
+    },
+    {
+        img: cnimg2,
+        title: 'Silver Nose Ring',
+        text: 'Minimal silver nose ring designed for everyday elegance.',
+        price: '₹1,499'
+    },
+    {
+        img: cnimg3,
+        title: 'Silver Bracelet',
+        text: 'Classic silver bracelet crafted for a timeless look.',
+        price: '₹3,299'
+    },
+    {
+        img: cnimg4,
+        title: 'Silver Pendant',
+        text: 'Delicate silver pendant polished to perfection.',
+        price: '₹1,999'
+    }
 ];
 
 class Condos extends Component {

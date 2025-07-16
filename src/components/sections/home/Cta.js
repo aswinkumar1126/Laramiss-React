@@ -6,7 +6,7 @@ import ctabg from '../../../assets/img/category/grid-3.webp';
 class Cta extends Component {
     render() {
         return (
-            <section className="pt-115 pb-115 bg-white cta-sec" style={{ backgroundImage: "url("+ ctabg +")" }}>
+            <section className="pt-55 pb-55 bg-white cta-sec" style={{ backgroundImage: "url("+ ctabg +")" }}>
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-7">
@@ -16,7 +16,7 @@ class Cta extends Component {
                                     <h2 >Rare Collections.</h2>
                                 </div>
                                 <p className="pr-50">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, aliquip ex ea commodo consequat you have to understand this.
+                                    Discover our handpicked collection of premium silver jewelry — from intricately crafted necklaces to elegant rings and statement earrings. Each piece is made with high-quality silver and polished to perfection, bringing a timeless charm to your everyday and special occasion looks.
                                 </p>
                                 <Link to="/shop-left" className="main-btn btn-filled mt-40">Shop now</Link>
                             </div>

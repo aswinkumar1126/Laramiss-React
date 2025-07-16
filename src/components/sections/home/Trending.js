@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
 
-import img1 from '../../../assets/img/room-suite/01.jpg'
-import img2 from '../../../assets/img/room-suite/02.jpg'
-import img3 from '../../../assets/img/room-suite/03.jpg'
+import img1 from '../../../assets/img/room-suite/Product_7.webp'
+import img2 from '../../../assets/img/room-suite/Cart.webp'
+import img3 from '../../../assets/img/room-suite/BMG_Earings.webp'
 
 const trendingposts = [
-    { img: img1, title: 'Wedding Ring', text: 'Machine Design , 24 Carat', price: '$345/10gm' },
-    { img: img2, title: 'Gold Neckless', text: 'Machine Design , 24 Carat', price: '$345/10gm' },
-    { img: img3, title: 'Barry Gold Bangle', text: 'Machine Design , 24 Carat', price: '$345/10gm' },
-    { img: img1, title: 'Gold Earring', text: 'Machine Design , 24 Carat', price: '$345/10gm' },
+    { img: img1, title: 'Wedding Ring', text: 'Machine Design, 24 Carat', price: '₹299' },
+    { img: img2, title: 'Silver Necklace', text: 'Machine Design, 24 Carat', price: '₹599' },
+    { img: img3, title: 'Barry Silver Bangle', text: 'Machine Design, 24 Carat', price: '₹450' },
+    { img: img1, title: 'Silver Earring', text: 'Machine Design, 24 Carat', price: '₹799' }
 ];
 
 class Trending extends Component {
@@ -31,7 +31,7 @@ class Trending extends Component {
                         <h2>Trending Collection</h2>
                     </div>
                     <div className="text-center mb-20" >
-                        <Link to="#" style={{ color: '#404040' }}>View more
+                        <Link to="#" >View more
                             <i className="fal fa-arrow-right ml-2" />
                         </Link>
                     </div>
@@ -48,7 +48,7 @@ class Trending extends Component {
                                         <h3 >
                                             <Link to="/shop-detail" className="tren-title"  >{item.title}</Link>
                                         </h3>
-                                        <p>{item.text}</p>
+                                       
                                         <span className="price">{item.price} </span>
                                     </div>
                                 </div>
